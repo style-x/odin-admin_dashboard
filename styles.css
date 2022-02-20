@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(Roboto-Medium.ttf);
+}
+
 :root {
   --clr-main: lightblue;
 }
@@ -6,6 +11,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -48,17 +54,36 @@ header {
   width: 40%;
 }
 
-.container {
+section {
+  display: flex;
+}
+
+.grid-container {
   display: grid;
   height: 100%;
   width: 100%;
   padding: 0.5rem;
   gap: 0.5rem;
-  grid-template-columns: 3fr 3fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .grid-item {
   background-color: lightpink;
   padding: 0.5rem;
   height: 12rem;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 10rem;
+  background-color: lightslategray;
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 0px;
+    display: none;
+    overflow: hidden;
+  }
 }
