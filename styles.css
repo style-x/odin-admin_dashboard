@@ -4,7 +4,7 @@
 }
 
 :root {
-  --clr-main: lightblue;
+  --clr-main: #1992d4;
 }
 
 * {
@@ -23,13 +23,18 @@ body {
 
 nav {
   background-color: var(--clr-main);
-  width: 10rem;
+  width: 14rem;
   padding: 1rem;
+  color: white;
 }
 
 nav li {
   list-style: none;
   padding-top: 1.2rem;
+}
+
+.nav-img {
+  color: white;
 }
 
 main {
@@ -49,10 +54,29 @@ header {
   width: 60%;
 }
 
+.left input {
+  width: 90%;
+  margin: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.8rem;
+  border: transparent;
+  background-color: #e2e8f0;
+}
+
 .right {
   background-color: white;
   padding: 0.5rem;
   width: 40%;
+}
+
+.right button {
+  width: 5rem;
+  padding: 0.6rem;
+  border: transparent;
+  border-radius: 1rem;
+  background-color: var(--clr-main);
+  margin: 1rem;
+  color: white;
 }
 
 section {
@@ -61,7 +85,14 @@ section {
   box-shadow: rgba(50, 50, 50, 0.25) 0px 15px 10px -12px inset;
 }
 
+.grid-container>h4 {
+  position: absolute;
+  left: 1rem;
+  top: -0.5rem;
+}
+
 .grid-container {
+  position: relative;
   display: grid;
   height: 100%;
   width: 100%;
@@ -73,7 +104,7 @@ section {
 
 .grid-item {
   background-color: white;
-  padding: 0.5rem;
+  padding: 2rem 1.2rem;
   height: 12rem;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -81,8 +112,23 @@ section {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.sidebar {
-  width: 12rem;
+.grid-item h4 {
+   padding-bottom: 0.4rem;
+}
+
+.grid-item p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+aside {
+  width: 15rem;
+  position: relative;
+}
+
+aside>h4 {
+  position: absolute;
+  left: 1rem;
+  top: -0.5rem;
 }
 
 @media screen and (max-width: 900px) {
