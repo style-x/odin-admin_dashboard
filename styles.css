@@ -69,13 +69,25 @@ header {
   width: 40%;
 }
 
+.menue {
+  height: 50%;
+  padding: 1rem;
+  text-align: right;
+}
+
+.buttons {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .right button {
   width: 5rem;
   padding: 0.6rem;
   border: transparent;
   border-radius: 1rem;
   background-color: var(--clr-main);
-  margin: 1rem;
   color: white;
 }
 
@@ -132,7 +144,7 @@ aside>h4 {
 }
 
 @media screen and (max-width: 900px) {
-  .sidebar {
+  aside {
     width: 0px;
     display: none;
     overflow: hidden;
